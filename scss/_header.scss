@@ -1,0 +1,34 @@
+header {
+  width: 100%;
+  height: 41px;
+  background-color: black;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  .column-lg-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 41px;
+    p {
+      margin-left: 65px;
+      .headerSpan {
+        color: #33ba9f;
+        font-weight: 900;
+        font-family: "ralewayextrabold";
+      }
+    }
+    ul {
+      margin-right: 100px;
+      li {
+        display: inline;
+        margin-left: 40px;
+        font-weight: 900;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}

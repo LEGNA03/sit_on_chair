@@ -1,0 +1,75 @@
+.firstSection {
+  .column-lg-12 {
+    display: flex;
+    background-image: linear-gradient(#fbfbfb, #dbdae0);
+    .edgedLeft, .edgedRight{
+      display: flex;
+      p {
+        display: flex;
+        align-items: center;
+        font-size: 70px;
+        color: #33ba9f;
+      }
+    }
+    .edgedLeft {
+      justify-content: flex-end;
+    }
+    .edgedRight {
+      justify-content: center;
+    }
+      div {
+      height: 504px;
+    }
+    div:nth-child(2) {
+      position: relative;
+      img {
+        width: 560px;
+        height: 410px;
+        position: absolute;
+        margin-top: 80px;
+        left: -80px;
+      }
+    }
+    div:nth-child(3) {
+      h1 {
+        font-weight: normal;
+        margin-top:140px;
+        margin-left: 50px;
+        word-spacing: 5px;
+        font-size: 37px;
+        span {
+          color: #33ba9f;
+          font-weight: bold;
+        }
+      }
+      p {
+        margin-top: 35px;
+        text-align: center;
+        text-justify: auto;
+      }
+      div {
+        margin-top: 30px;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        button {
+          font-size: 23px;
+          background: #33ba9f;
+          color: white;
+          border-radius: 10px;
+          height: 50px;
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+$widht: 10%,35%, 40%, 15%;
+
+@for $i from 1 through 4 {
+    .firstSection .column-lg-12 div:nth-child(#{$i}) {
+      width: nth($widht, $i);
+    }
+}

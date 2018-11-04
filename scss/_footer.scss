@@ -1,0 +1,26 @@
+footer {
+  .column-lg-12 {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    p {
+      width: 65%;
+      margin-left: 65px;
+      word-spacing: 1px;
+      letter-spacing: 1px;
+      color: #b7b7b7;
+    }
+    div {
+      width: 15%;
+      display: flex;
+      justify-content: space-around;
+    }
+    > :last-child {
+      width: 20%;
+      font-size: 20px;
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+}

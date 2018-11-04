@@ -1,0 +1,308 @@
+@mixin bigCircle {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 45px;
+    left: calc(50% - 25px);
+    top: -37px;
+}
+
+@mixin littleCircle {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 27px;
+  border-radius: 45px;
+  left: calc(50% - 11px);
+  top: -22px;
+  z-index: 1;
+}
+
+@mixin h3 {
+  font-size: 23px;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+@mixin button {
+  width: 120px;
+  height: 35px;
+  border-radius: 7px;
+}
+
+.thirdSection {
+  .container {
+    height: 725px;
+    background-color: #f1f1f1;
+    .column-lg-12 {
+      height: 100px;
+      position: relative;
+      h2 {
+        position: absolute;
+        top: 45px;
+        left: 66px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: normal;
+        &:after {
+          content: "";
+          background-color: #33ba9f;
+          height: 8px;
+          position: absolute;
+          display: block;
+          top: 32px;
+          left: 2px;
+          width: 320px;
+        }
+      }
+    }
+    .mainContent {
+      height: 625px;
+      .column-lg-12 {
+        height: 625px;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 50px;
+        padding-right: 67px;
+        .box {
+          position: relative;
+          width: 325px;
+          height: 500px;
+          margin-top: 58px;
+          border: 2px solid #d4d4d4;
+        }
+        > :nth-child(1) {
+          background: #f9f9f9;
+          &:before {
+            @include littleCircle;
+            background: #c1c1c1;
+          }
+          &:after {
+            @include bigCircle;
+            background: white;
+            border: 2px solid #d4d4d4;
+          }
+          .priceBox {
+            width:100%;
+            height: 215px;
+            h3 {
+              @include h3;
+              color: #37c7ab;
+            }
+            .bigestCircle {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 126px;
+              height: 126px;
+              border-radius: 100%;
+              left: calc(50% - 63px);
+              top: 80px;
+              z-index: 0;
+              background: white;
+              border: 1px solid #c1c1c1;
+              p {
+                font-weight: bold;
+                margin-top: 25px;
+                color: #c1c1c1;
+                text-align: center;
+                font-size: 40px;
+                sup {
+                  font-size: 14px;
+                }
+              }
+              p + p {
+                font-size: 15px;
+                margin-top:   0;
+              }
+            }
+          }
+          .attributeBox {
+            p {
+              padding-top: 5px;
+              font-size: 25px;
+              text-align: center;
+              height: 45px;
+            }
+            > :first-child {
+              background: #e4e4e4;
+              color: #9a9a9a;
+            }
+            > :nth-child(2) {
+              background: #f0f0f0;
+              color: #7b7b7b;
+            }
+              div {
+                display: flex;
+                height: 160px;
+                width: 100%;
+                justify-content: center;
+                button {
+                  @include button;
+                  margin-top: 110px;
+                  font-size: 20px;
+                  color: white;
+                  background: #37c7ab;
+                }
+              }
+          }
+        }
+        > :nth-child(2) {
+          background: #37c7ab;
+          border: 2px solid #37c7ab;
+          &:before {
+            @include littleCircle;
+            background: #f1f1f1;
+            top: -24px;
+            left: calc(50% - 12px);
+          }
+          &:after {
+            @include bigCircle;
+            background: #37c7ab;
+          }
+          .priceBox {
+            width: 100%;
+            height: 215px;
+            h3 {
+              @include h3;
+              color: white;
+            }
+            .bigestCircle {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 126px;
+              height: 126px;
+              border-radius: 100%;
+              left: calc(50% - 63px);
+              top: 80px;
+              z-index: 0;
+              background: white;
+              p {
+                font-weight: bold;
+                margin-top: 25px;
+                color: #37c7ab;
+                text-align: center;
+                font-size: 40px;
+                sup {
+                  font-size: 14px;
+                }
+              }
+              p + p {
+                font-size: 15px;
+                margin-top:   0;
+              }
+            }
+          }
+          .attributeBox {
+            p {
+              padding-top: 5px;
+              font-size: 25px;
+              text-align: center;
+              background: white;
+              height: 45px;
+              color: #9b9b9b;
+            }
+            :nth-child(2) {
+              background: #f0f0f0;
+            }
+            div {
+              display: flex;
+              height: 160px;
+              width: 100%;
+              justify-content: center;
+              button {
+                @include button;
+                margin-top: 70px;
+                font-size: 20px;
+                color: #37c7ab;
+                background: white;
+              }
+            }
+          }
+        }
+        > :nth-child(3) {
+          background: #f9f9f9;
+          &:before {
+            @include littleCircle;
+            background: #c1c1c1;
+          }
+          &:after {
+            @include bigCircle;
+            background: white;
+            border: 2px solid #d4d4d4;
+          }
+          .priceBox {
+            width: 100%;
+            height: 215px;
+            h3 {
+              @include h3;
+              color: #37c7ab;
+            }
+            .bigestCircle {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 126px;
+              height: 126px;
+              border-radius: 100%;
+              left: calc(50% - 63px);
+              top: 80px;
+              z-index: 0;
+              background: white;
+              border: 1px solid #c1c1c1;
+              p {
+                font-weight: bold;
+                margin-top: 25px;
+                color: #c1c1c1;
+                text-align: center;
+                font-size: 40px;
+                sup {
+                  font-size: 14px;
+                }
+              }
+              p + p {
+                font-size: 15px;
+                margin-top:   0;
+              }
+            }
+          }
+          .attributeBox {
+            p {
+              padding-top: 5px;
+              font-size: 25px;
+              text-align: center;
+              background: #0000fe;
+              height: 45px;
+            }
+            > :first-child, > :nth-child(3) {
+              background: #e4e4e4;
+              color: #9a9a9a;
+            }
+            > :nth-child(2), > :nth-child(4) {
+              background: #f0f0f0;
+              color: #7b7b7b;
+            }
+            div {
+              display: flex;
+              height: 160px;
+              width: 100%;
+              justify-content: center;
+              button {
+                @include button;
+                margin-top: 25px;
+                font-size: 20px;
+                color: white;
+                background: #37c7ab;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
